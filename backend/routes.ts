@@ -2,6 +2,8 @@ import { Router } from "https://deno.land/x/oak/mod.ts";
 
 const router = new Router();
 
-router.get("/api/v1/products", { result: "test" });
+router.get("/", (context) => {
+  context.response.body = "Hello world!";
+});
 
 export default router;
